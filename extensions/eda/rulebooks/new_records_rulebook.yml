@@ -11,5 +11,6 @@
     - name: New record created
       condition: event.sys_id is defined
       action:
-        run_playbook:
-          name: playbooks/new_record.yml
+        run_job_template:
+          name: "print_snow_record_test"
+          organisation: "solventum"
